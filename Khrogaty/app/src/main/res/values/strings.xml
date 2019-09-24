@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Khrogaty</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--OnBoarding-->
+    <string name="next">Next \u003E</string>
+    <string name="prev">\u003C Prev</string>
+    <string name="start">Start</string>
+    <string name="places_for_going_out">Places For Going Out</string>
+    <string name="restaurants_and_coffee">Restaurants &amp; Coffee Shops</string>
+    <string name="what_do_i_do">What Do I Do?</string>
+    <string name="onboarding_text">Loem is simply dummy text of the project until we find the original text</string>
+
+</resources>
