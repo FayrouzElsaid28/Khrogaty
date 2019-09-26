@@ -6,11 +6,12 @@ import android.view.View
 import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_on_boarding.*
 import roqay.task.khrogaty.R
+import roqay.task.khrogaty.base.INavigation
 import roqay.task.khrogaty.base.extensions.openActivity
 import roqay.task.khrogaty.base.helpers.LaunchingActivity
 import roqay.task.khrogaty.features.HomeActivity
 
-class OnBoardingActivity : AppCompatActivity() {
+class OnBoardingActivity : AppCompatActivity(), INavigation {
 
     private var currentFragment = 0
 
@@ -28,22 +29,22 @@ class OnBoardingActivity : AppCompatActivity() {
 
     }
 
-    private fun handleNavigation() {
+    override fun handleNavigation() {
         next_tv.setOnClickListener {
-            currentFragment ++
+            currentFragment++
             onboarding_viewpager.setCurrentItem(currentFragment, true)
         }
         prev_tv.setOnClickListener {
-            currentFragment --
+            currentFragment--
             onboarding_viewpager.setCurrentItem(currentFragment, true)
         }
         start_tv.setOnClickListener {
-            openActivity(this,HomeActivity::class.java)
+            openActivity(this, HomeActivity::class.java)
             finishAffinity()
         }
     }
 
-    private fun handleViewPager() {
+    override fun handleViewPager() {
         onboarding_viewpager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
 
@@ -51,7 +52,7 @@ class OnBoardingActivity : AppCompatActivity() {
 
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
                 currentFragment = position
-                checkCurrentFragment()
+                handleNavView(currentFragment)
             }
 
             override fun onPageSelected(position: Int) {
@@ -60,7 +61,7 @@ class OnBoardingActivity : AppCompatActivity() {
         })
     }
 
-    private fun checkCurrentFragment() {
+    override fun handleNavView(id: Int) {
         if (currentFragment == 0){
             prev_tv.visibility = View.GONE
             start_tv.visibility = View.GONE
