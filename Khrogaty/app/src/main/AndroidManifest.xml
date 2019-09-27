@@ -3,6 +3,8 @@
     package="roqay.task.khrogaty">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,10 +13,10 @@
         android:roundIcon="@drawable/khrogaty_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".features.details.DetailsActivity"></activity>
-        <activity android:name=".onboarding.OnBoardingActivity" />
-        <activity android:name=".features.home.HomeActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name="roqay.task.khrogaty.view.features.details.DetailsActivity"></activity>
+        <activity android:name="roqay.task.khrogaty.view.onboarding.OnBoardingActivity" />
+        <activity android:name="roqay.task.khrogaty.view.features.home.HomeActivity" />
+        <activity android:name=".view.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

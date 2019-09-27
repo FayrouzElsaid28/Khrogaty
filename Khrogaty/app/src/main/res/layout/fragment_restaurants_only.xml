@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.home.homeFragments.restaurants.restaurantsFragments.RestaurantsOnlyFragment">
+    tools:context=".view.features.home.homeFragments.restaurants.restaurantsFragments.RestaurantsOnlyFragment">
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/restaurants_only_recyclerview"

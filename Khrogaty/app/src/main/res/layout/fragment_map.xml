@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".features.details.detailsFragments.map.MapFragment">
+    tools:context=".view.features.details.detailsFragments.map.MapFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:background="@drawable/search_background"
@@ -49,8 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <fragment
-        android:name="com.google.android.gms.maps.MapFragment"
+    <com.google.android.gms.maps.MapView
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
