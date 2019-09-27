@@ -13,4 +13,10 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+    <style name="HomeCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
 </resources>

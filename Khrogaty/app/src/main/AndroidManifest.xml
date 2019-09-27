@@ -11,8 +11,9 @@
         android:roundIcon="@drawable/khrogaty_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".onboarding.OnBoardingActivity"></activity>
-        <activity android:name=".features.HomeActivity" />
+        <activity android:name=".features.details.DetailsActivity"></activity>
+        <activity android:name=".onboarding.OnBoardingActivity" />
+        <activity android:name=".features.home.HomeActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAmzLsq0aUgrZYm0uMcyibEUkUI7fQ-uow"/>
     </application>
 
 </manifest>

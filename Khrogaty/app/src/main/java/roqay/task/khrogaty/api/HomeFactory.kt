@@ -7,23 +7,23 @@ import com.androidnetworking.common.Priority
 object HomeFactory {
 
     fun getAllPlaces(categories_id: Int): ANRequest<*>{
-        val androidNetworking = AndroidNetworking.get(PLACES_URL)
+        val androidNetworking = AndroidNetworking.get(Url_helper.getPlacesUrl(categories_id))
             .setPriority(Priority.MEDIUM)
             .build()
 
         return androidNetworking
     }
 
-    fun getAllRestaurants(): ANRequest<*>{
-        val androidNetworking = AndroidNetworking.get(RESTAURANTS_URL)
+    fun getAllRestaurants(categories_id: Int): ANRequest<*>{
+        val androidNetworking = AndroidNetworking.get(Url_helper.getRestaurantsUrl(categories_id))
             .setPriority(Priority.MEDIUM)
             .build()
 
         return androidNetworking
     }
 
-    fun getAllActivites(): ANRequest<*>{
-        val androidNetworking = AndroidNetworking.get(ACTIVITIES_URL)
+    fun getAllActivites(categories_id: Int): ANRequest<*>{
+        val androidNetworking = AndroidNetworking.get(Url_helper.getActivitesUrl(categories_id))
             .setPriority(Priority.MEDIUM)
             .build()
 

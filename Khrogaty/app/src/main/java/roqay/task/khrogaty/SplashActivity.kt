@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import roqay.task.khrogaty.base.extensions.openActivity
 import roqay.task.khrogaty.base.helpers.LaunchingActivity
-import roqay.task.khrogaty.features.HomeActivity
+import roqay.task.khrogaty.features.home.HomeActivity
 import roqay.task.khrogaty.onboarding.OnBoardingActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
             if(isFirstLaunch())
                 openActivity(this,OnBoardingActivity::class.java)
             else
-                openActivity(this,HomeActivity::class.java)
+                openActivity(this, HomeActivity::class.java)
             finishAffinity()
         }, 1000)
     }

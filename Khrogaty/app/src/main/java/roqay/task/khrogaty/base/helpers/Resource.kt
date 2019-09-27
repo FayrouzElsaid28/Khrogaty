@@ -1,11 +1,5 @@
 package roqay.task.khrogaty.base.helpers
 
-/**
- * Developed by Fayrouz elsayed
- * fayrouz_elsaid96@yahoo.com
- */
-
-
 class Resource<T> private constructor(val status: Status, val data: T?, val message: String?) {
     enum class Status {
         SUCCESS, ERROR, LOADING, EMPTY

@@ -4,179 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.HomeActivity">
+    tools:context=".features.home.HomeActivity">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/home_viewpager"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/icons_layout"
+        app:layout_constraintBottom_toTopOf="@id/home_tablayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"/>
 
-    <!--Navigation-->
-    <LinearLayout
-        android:id="@+id/icons_layout"
-        android:orientation="horizontal"
-        android:weightSum="5"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/home_tablayout"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:tabIndicatorColor="@color/transparent"
+        app:tabSelectedTextColor="@color/nav_green"
+        app:tabTextColor="@color/nav_gray"
+        app:tabTextAppearance="@style/HomeCustomTextAppearance"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <!--Home-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/home"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/home_img"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:src="@drawable/home"
-                android:padding="15dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
-
-            <TextView
-                android:id="@+id/home_tv"
-                android:text="@string/home"
-                android:textSize="10sp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/home_img"
-                app:layout_constraintEnd_toEndOf="@id/home_img"
-                app:layout_constraintStart_toStartOf="@id/home_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--Search-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/search"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/search_img"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:src="@drawable/filter"
-                android:padding="15dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
-
-            <TextView
-                android:id="@+id/search_tv"
-                android:text="@string/search"
-                android:textSize="10sp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/search_img"
-                app:layout_constraintEnd_toEndOf="@id/search_img"
-                app:layout_constraintStart_toStartOf="@id/search_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--Find Category-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/find_places"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/find_places_img"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:src="@drawable/find_places"
-                android:padding="15dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
-
-            <TextView
-                android:id="@+id/find_places_tv"
-                android:text="@string/find_places"
-                android:textSize="10sp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/find_places_img"
-                app:layout_constraintEnd_toEndOf="@id/find_places_img"
-                app:layout_constraintStart_toStartOf="@id/find_places_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--Restaurants-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/restaurants"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/restaurants_img"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:src="@drawable/restaurants"
-                android:padding="15dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
-
-            <TextView
-                android:id="@+id/restaurants_tv"
-                android:text="@string/restaurants"
-                android:textSize="10sp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/restaurants_img"
-                app:layout_constraintEnd_toEndOf="@id/restaurants_img"
-                app:layout_constraintStart_toStartOf="@id/restaurants_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--Things To Do-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/things_to_to"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/things_to_to_img"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:src="@drawable/todo"
-                android:padding="15dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
-
-            <TextView
-                android:id="@+id/things_to_to_tv"
-                android:text="@string/things_to_do"
-                android:textSize="10sp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/things_to_to_img"
-                app:layout_constraintEnd_toEndOf="@id/things_to_to_img"
-                app:layout_constraintStart_toStartOf="@id/things_to_to_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
+        android:layout_height="70dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

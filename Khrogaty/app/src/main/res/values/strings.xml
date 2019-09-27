@@ -12,8 +12,7 @@
     <string name="restaurants_and_coffee">Restaurants &amp; Coffee Shops</string>
     <string name="what_do_i_do">What Do I Do?</string>
     <string name="onboarding_text">Loem is simply dummy text of the project until we find the original text</string>
-
-
+    
     <!--Home-->
     <string name="home">Home</string>
     <string name="search">Search</string>
@@ -25,11 +24,17 @@
     <!--Search-->
     <string name="search_here_by_place">Search here by place</string>
     <string name="search_for_any_place">Search for any places</string>
+    <string name="no_items_found">No Item Found</string>
 
     <!--Restaurants-->
     <string name="rest_coffee">Rest / Coffees</string>
 
     <!--Category-->
     <string name="details">Details</string>
+    
+    <!--Details-->
+    <string name="more_info">More Information</string>
+    <string name="leave_comment">Leave a comment</string>
+    <string name="write_here">Write here</string>
 
 </resources>

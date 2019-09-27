@@ -9,7 +9,7 @@ import roqay.task.khrogaty.R
 import roqay.task.khrogaty.base.INavigation
 import roqay.task.khrogaty.base.extensions.openActivity
 import roqay.task.khrogaty.base.helpers.LaunchingActivity
-import roqay.task.khrogaty.features.HomeActivity
+import roqay.task.khrogaty.features.home.HomeActivity
 
 class OnBoardingActivity : AppCompatActivity(), INavigation {
 

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.details.detailsFragments.about.AboutFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/loading"
+           android:visibility="gone"
+           android:elevation="4dp"
+           app:layout_constraintTop_toTopOf="parent"
+           android:layout_width="match_parent"
+           android:layout_height="500dp">
+
+           <include layout="@layout/loading"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <ImageView
+           android:id="@+id/details_img"
+           app:layout_constraintTop_toTopOf="parent"
+           android:src="@drawable/khrogaty_logo"
+           android:scaleType="fitXY"
+           android:layout_width="match_parent"
+           android:layout_height="200dp"/>
+
+       <!--Name and details-->
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/details_layout"
+           app:layout_constraintTop_toBottomOf="@id/details_img"
+           android:layout_marginTop="32dp"
+           android:layout_marginStart="16dp"
+           android:layout_marginEnd="16dp"
+           android:elevation="3dp"
+           android:background="@drawable/search_background"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:id="@+id/details_name"
+               android:text="Tekka Restaurant"
+               android:textColor="@color/black"
+               android:textSize="18sp"
+               android:fontFamily="@font/happy_times_at_the_ikob_regular"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               android:layout_marginTop="16sp"
+               android:layout_marginStart="8dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/details_info"
+               android:textSize="10sp"
+               android:text="@string/onboarding_text"
+               app:layout_constraintTop_toBottomOf="@id/details_name"
+               app:layout_constraintBottom_toBottomOf="parent"
+               android:layout_marginStart="8dp"
+               android:layout_marginEnd="8dp"
+               android:layout_marginTop="8dp"
+               android:layout_marginBottom="8dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <!--Phone and email-->
+       <TextView
+           android:id="@+id/more_information_tv"
+           android:text="@string/more_info"
+           android:textSize="16sp"
+           android:textColor="@color/black"
+           android:fontFamily="@font/happy_times_at_the_ikob_regular"
+           app:layout_constraintTop_toBottomOf="@id/details_layout"
+           app:layout_constraintStart_toStartOf="@id/details_layout"
+           android:layout_marginTop="16dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/more_information_layout"
+           android:background="@drawable/search_background"
+           app:layout_constraintTop_toBottomOf="@id/more_information_tv"
+           android:layout_marginTop="8dp"
+           android:layout_marginStart="16dp"
+           android:layout_marginEnd="16dp"
+           android:elevation="3dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <ImageView
+               android:id="@+id/address_img"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               android:layout_marginTop="16dp"
+               android:layout_marginStart="8dp"
+               android:src="@drawable/address"
+               android:layout_width="20dp"
+               android:layout_height="20dp"/>
+
+           <TextView
+               android:id="@+id/details_place"
+               android:text="Mansoura"
+               android:textSize="12sp"
+               android:ellipsize="end"
+               android:maxLines="1"
+               android:maxWidth="120dp"
+               app:layout_constraintTop_toTopOf="@id/address_img"
+               app:layout_constraintBottom_toBottomOf="@id/address_img"
+               app:layout_constraintStart_toEndOf="@id/address_img"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:layout_marginStart="8dp"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"/>
+
+           <ImageView
+               android:id="@+id/call_img"
+               android:src="@drawable/call"
+               app:layout_constraintTop_toBottomOf="@id/address_img"
+               app:layout_constraintStart_toStartOf="@id/address_img"
+               android:layout_marginTop="16dp"
+               android:layout_width="20dp"
+               android:layout_height="20dp"/>
+
+           <TextView
+               android:id="@+id/details_phone"
+               android:text="0102154821521 - 01011554823"
+               android:textSize="12sp"
+               android:ellipsize="end"
+               android:maxLines="1"
+               android:maxWidth="120dp"
+               app:layout_constraintTop_toTopOf="@id/call_img"
+               app:layout_constraintBottom_toBottomOf="@id/call_img"
+               app:layout_constraintStart_toEndOf="@id/call_img"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:layout_marginStart="8dp"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"/>
+
+           <ImageView
+               android:id="@+id/mail_img"
+               android:src="@drawable/mail"
+               app:layout_constraintTop_toBottomOf="@id/call_img"
+               app:layout_constraintStart_toStartOf="@id/call_img"
+               app:layout_constraintBottom_toBottomOf="parent"
+               android:layout_marginTop="16dp"
+               android:layout_marginBottom="16dp"
+               android:layout_width="20dp"
+               android:layout_height="20dp"/>
+
+           <TextView
+               android:id="@+id/details_mail"
+               android:text="tekka@gmail.com"
+               android:textSize="12sp"
+               android:ellipsize="end"
+               android:maxLines="1"
+               android:maxWidth="120dp"
+               app:layout_constraintTop_toTopOf="@id/mail_img"
+               app:layout_constraintBottom_toBottomOf="@id/mail_img"
+               app:layout_constraintStart_toEndOf="@id/mail_img"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:layout_marginStart="8dp"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <!--Comments-->
+       <TextView
+           android:id="@+id/leave_comment_tv"
+           android:text="@string/leave_comment"
+           android:textSize="18sp"
+           android:textColor="@color/black"
+           android:fontFamily="@font/happy_times_at_the_ikob_regular"
+           app:layout_constraintTop_toBottomOf="@+id/more_information_layout"
+           app:layout_constraintStart_toStartOf="@id/more_information_layout"
+           android:layout_marginTop="16dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/comments_recyclerview"
+           app:layout_constraintTop_toBottomOf="@id/leave_comment_tv"
+           android:layout_marginStart="16dp"
+           android:layout_marginEnd="16dp"
+           android:layout_marginTop="8dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+
+       <!--Add comment-->
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:background="@drawable/search_background"
+           android:elevation="3dp"
+           app:layout_constraintTop_toBottomOf="@id/comments_recyclerview"
+           app:layout_constraintBottom_toBottomOf="parent"
+           android:layout_marginBottom="8dp"
+           android:layout_marginTop="8dp"
+           android:layout_marginStart="16dp"
+           android:layout_marginEnd="16dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <EditText
+               android:id="@+id/add_comment_et"
+               android:hint="@string/write_here"
+               android:gravity="center|start"
+               android:textSize="12sp"
+               android:layout_marginEnd="8dp"
+               android:layout_marginStart="8dp"
+               android:textColorHint="@color/black"
+               android:background="@color/transparent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toStartOf="@id/send_comment_img"
+               android:layout_width="0dp"
+               android:layout_height="0dp"/>
+
+           <ImageView
+               android:id="@+id/send_comment_img"
+               android:src="@drawable/telegram"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               android:padding="20dp"
+               android:layout_width="60dp"
+               android:layout_height="60dp"/>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
