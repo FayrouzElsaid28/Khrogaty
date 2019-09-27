@@ -13,9 +13,15 @@ import roqay.task.khrogaty.features.details.IDetails
 import android.webkit.WebViewClient
 import android.content.Intent
 import android.net.Uri
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
 
 
-class MapFragment : Fragment(), IDetails {
+class MapFragment : Fragment(),
+    OnMapReadyCallback,
+    IDetails {
+
+    private var mMap: GoogleMap? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,13 +39,16 @@ class MapFragment : Fragment(), IDetails {
     override fun getDetails() {
         details_place.text = CategoryDetails.details_place
         val details_map_url = CategoryDetails.details_map_location_url
-        initWebView(details_map_url)
     }
 
     private fun initWebView(detailsMapUrl: String) {
         map_webview.webViewClient = WebViewClient()
         map_webview.settings.javaScriptEnabled = true
         map_webview.loadUrl(detailsMapUrl)
+    }
+
+    override fun onMapReady(googleMap: GoogleMap?) {
+        mMap = googleMap
     }
 
 }
