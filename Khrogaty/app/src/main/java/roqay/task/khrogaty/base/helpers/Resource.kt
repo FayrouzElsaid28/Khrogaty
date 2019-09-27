@@ -1,5 +1,8 @@
 package roqay.task.khrogaty.base.helpers
 
+/**
+ * Determine the status of the response
+ */
 class Resource<T> private constructor(val status: Status, val data: T?, val message: String?) {
     enum class Status {
         SUCCESS, ERROR, LOADING, EMPTY

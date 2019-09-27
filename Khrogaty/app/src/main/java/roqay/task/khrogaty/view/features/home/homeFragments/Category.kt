@@ -6,6 +6,9 @@ import roqay.task.khrogaty.models.comment.Comment
 import roqay.task.khrogaty.models.place.Place
 import roqay.task.khrogaty.models.restaurant.Restaurant
 
+/**
+ * All lists loaded from api
+ */
 class Category {
     companion object{
         var places_list = arrayListOf<Place>()

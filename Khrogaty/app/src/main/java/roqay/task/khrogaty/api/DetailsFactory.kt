@@ -4,6 +4,9 @@ import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.ANRequest
 import com.androidnetworking.common.Priority
 
+/**
+ * Object for details only
+ */
 object DetailsFactory {
 
     fun getAllComments(post_id: Int): ANRequest<*> {

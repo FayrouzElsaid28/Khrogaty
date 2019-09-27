@@ -18,12 +18,18 @@ import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.google.android.gms.maps.model.Polyline
+import com.google.android.gms.maps.model.PolylineOptions
 import kotlinx.android.synthetic.main.custom_tab.view.*
+import roqay.task.khrogaty.base.directionhelpers.TaskLoadedCallback
 import roqay.task.khrogaty.base.helpers.Location
 
 
+@Suppress("DEPRECATION")
 class DetailsActivity : AppCompatActivity(),
-    IDetails, INavigation {
+    IDetails,
+    INavigation,
+    TaskLoadedCallback {
 
     private var currentFragment = 0
     private var firstTab: ConstraintLayout? = null
@@ -31,6 +37,7 @@ class DetailsActivity : AppCompatActivity(),
     private var selectedColor = 0
     private var unselectedColor = 0
     private var locationManager: LocationManager? = null
+    private var currentPolyline: Polyline? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +57,7 @@ class DetailsActivity : AppCompatActivity(),
     }
 
     private fun handleTabLayout() {
+        //Set tabs back round to custom tab so that image can be at the right if text
         firstTab = LayoutInflater.from(this).inflate(R.layout.custom_tab, null) as ConstraintLayout
         secondTab = LayoutInflater.from(this).inflate(R.layout.custom_tab, null) as ConstraintLayout
 
@@ -156,5 +164,9 @@ class DetailsActivity : AppCompatActivity(),
 
     override fun getDetails() {
         details_name.text = CategoryDetails.details_name
+    }
+
+    override fun onTaskDone(vararg values: Any?) {
+        currentPolyline = Location.mMap?.addPolyline(values[0] as PolylineOptions)
     }
 }

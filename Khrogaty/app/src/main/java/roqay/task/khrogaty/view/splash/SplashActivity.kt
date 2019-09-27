@@ -6,14 +6,19 @@ import android.os.Handler
 import roqay.task.khrogaty.R
 import roqay.task.khrogaty.base.extensions.openActivity
 import roqay.task.khrogaty.base.helpers.LaunchingActivity
+import roqay.task.khrogaty.base.helpers.Location
 import roqay.task.khrogaty.view.features.home.HomeActivity
 import roqay.task.khrogaty.view.onboarding.OnBoardingActivity
 
+@Suppress("DEPRECATION")
 class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
+        //Initialize map route color
+        Location.lineColor = resources.getColor(R.color.nav_green)
 
         //Check first launch
         Handler().postDelayed({

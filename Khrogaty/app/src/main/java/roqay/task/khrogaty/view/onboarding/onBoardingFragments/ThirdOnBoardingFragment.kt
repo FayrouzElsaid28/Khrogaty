@@ -21,6 +21,4 @@ class ThirdOnBoardingFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_third_on_boarding, container, false)
     }
-
-
 }

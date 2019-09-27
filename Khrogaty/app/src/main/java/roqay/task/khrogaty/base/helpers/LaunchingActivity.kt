@@ -4,6 +4,9 @@ import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
 
+/**
+ * Determining launching application to specify which activity to start with
+ */
 class LaunchingActivity private constructor(){
 
     fun setIsFirstLaunchToFalse() {

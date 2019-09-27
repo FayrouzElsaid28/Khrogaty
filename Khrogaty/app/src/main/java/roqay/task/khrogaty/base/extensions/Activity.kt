@@ -8,6 +8,9 @@ import android.widget.CheckBox
 import android.widget.LinearLayout
 import android.widget.Toast
 
+/**
+ * Extensions for reducing code inside activities
+ */
 fun <T> Activity.openActivity(context: Context, cls: Class<T>) {
     startActivity(Intent(context, cls))
 }

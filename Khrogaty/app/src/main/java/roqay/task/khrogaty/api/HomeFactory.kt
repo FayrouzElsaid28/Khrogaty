@@ -4,6 +4,9 @@ import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.ANRequest
 import com.androidnetworking.common.Priority
 
+/**
+ * For main functions in home screen
+ */
 object HomeFactory {
 
     fun getAllPlaces(categories_id: Int): ANRequest<*>{

@@ -52,7 +52,9 @@ class AboutFragment : Fragment(), IDetails {
     }
 
     private fun sendComment() {
+        //Check if text is empty
         if (add_comment_et.text.trim().length > 0){
+
             viewModel.addComment("Fayrouz",
                 "Fayrouzelsaid28@gmail.com",
                 add_comment_et.text.toString(),
@@ -74,7 +76,6 @@ class AboutFragment : Fragment(), IDetails {
                         }
                         Resource.Status.ERROR -> {
                             makeLongToast(it?.message!!)
-                            Log.d("error",it.message!!)
                             loading.visibility = View.GONE
                         }
                     }
@@ -93,6 +94,7 @@ class AboutFragment : Fragment(), IDetails {
         details_place.text = CategoryDetails.details_place
         details_phone.text = CategoryDetails.details_phone
         details_mail.text = CategoryDetails.details_email
+
         loadComments(CategoryDetails.post_id)
     }
 
@@ -101,6 +103,7 @@ class AboutFragment : Fragment(), IDetails {
             .observe(this, Observer {
                 when(it.status){
                     Resource.Status.SUCCESS -> {
+                        //Update adapter list
                         commentAdapter.setData(Category.comments_list)
                         loading.visibility = View.GONE
                     }

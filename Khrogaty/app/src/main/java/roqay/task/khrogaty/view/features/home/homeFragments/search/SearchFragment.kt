@@ -39,7 +39,7 @@ class SearchFragment : Fragment(),
         super.onViewCreated(view, savedInstanceState)
 
         nosearch_icon.setOnClickListener {
-            if (search_et.text.trim().length > 0)
+            if (search_et.text.trim().isNotEmpty())
                 search(search_et.text.toString())
             else
                 makeLongToast("Please type something")

@@ -24,6 +24,7 @@ class HomeActivity : AppCompatActivity(), INavigation {
     }
 
     private fun handleTabIcons() {
+        //Set tab with icons
         home_tablayout.getTabAt(0)?.setIcon(R.drawable.home)
         home_tablayout.getTabAt(1)?.setIcon(R.drawable.filter)
         home_tablayout.getTabAt(2)?.setIcon(R.drawable.find_places)

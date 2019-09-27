@@ -39,7 +39,6 @@ class ToDoFragment : Fragment(),
         things_to_to_recyclerview.layoutManager = LinearLayoutManager(context)
         things_to_to_recyclerview.adapter = toDoAdapter
         getActivities()
-
     }
 
     private fun getActivities() {
